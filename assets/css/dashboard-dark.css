@@ -1,0 +1,231 @@
+/* === Dashboard Dark Theme (Unified) === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background-color: #0e1624;
+  color: #e4e9f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(90deg, #101a2f, #182743);
+  color: #e8eefc;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.logout a {
+  color: #9bb3e6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.logout a:hover {
+  color: #ffffff;
+}
+
+/* === Navigation === */
+nav {
+  background: #131e35;
+  display: flex;
+  gap: 20px;
+  padding: 10px 25px;
+  border-top: 1px solid #1e2b46;
+  border-bottom: 1px solid #1e2b46;
+}
+
+nav a {
+  color: #b4c8f2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+nav a:hover,
+nav a.active {
+  background: linear-gradient(90deg, #2d75ff, #4aa8ff);
+  color: #ffffff;
+}
+
+/* === Main Container === */
+.container, .dashboard-container, .content {
+  max-width: 1200px;
+  margin: 30px auto;
+  background: #111a2b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 25px 30px;
+  color: #e4e9f2;
+}
+
+/* === Typography === */
+h2, h3, strong {
+  color: #e8eefc;
+  margin-top: 0;
+}
+
+/* === Table === */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #182235;
+  border: 1px solid #1e2b46;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #24365c;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+th {
+  background: #1e2b46;
+  color: #9bb3e6;
+  font-weight: 600;
+}
+
+td {
+  color: #d1d9ec;
+}
+
+tr:nth-child(even) {
+  background: #131c30;
+}
+tr:hover {
+  background-color: rgba(68, 104, 173, 0.18);
+}
+
+/* === Forms and Inputs === */
+input, textarea, select {
+  background: #0f1a2c;
+  border: 1px solid #23385f;
+  color: #e4e9f2;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2d75ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(45,117,255,0.3);
+}
+
+#searchReports {
+  background: #0f1a2c;
+  border: 1px solid #23385f;
+  color: #cfd8f3;
+  width: 250px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* === Buttons === */
+.action-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 6px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: linear-gradient(90deg, #377dff, #4aa8ff);
+}
+.delete-btn {
+  background: linear-gradient(90deg, #e05656, #ff6b6b);
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+/* === Photos === */
+.photo-container img {
+  width: 90px;
+  height: auto;
+  border-radius: 5px;
+  margin: 3px;
+  border: 1px solid #2b3c5f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s;
+}
+.photo-container img:hover {
+  transform: scale(1.07);
+}
+
+/* === Modal === */
+.modal-content {
+  background: #121d31;
+  color: #e4e9f2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #24365c;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.save-btn {
+  background: linear-gradient(90deg, #2d75ff, #4aa8ff);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+.save-btn:hover {
+  filter: brightness(1.2);
+}
+
+.loader {
+  border: 4px solid #1b2942;
+  border-top: 4px solid #4aa8ff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
